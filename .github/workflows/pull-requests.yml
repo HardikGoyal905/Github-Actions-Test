@@ -26,11 +26,10 @@ jobs:
             while read line; do  
 
               #Reading each line  
-              echo "Line No. $i : $line"  
               i=$((i+1))  
             done < $file  
             
-            i=$((i-2))
+            i=$((i-3))
             echo "${i} number of errors"
           }
           
