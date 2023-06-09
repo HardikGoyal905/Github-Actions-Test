@@ -32,23 +32,12 @@ jobs:
             i=$((i-3))
             echo "${i} number of errors"
           }
-          
-          echo "Projects Directory"
           cd ..          
-          echo "Download"
           curl -o checkStyle.jar -L https://github.com/checkstyle/checkstyle/releases/download/checkstyle-10.12.0/checkstyle-10.12.0-all.jar
           curl -o configureStyle.xml -L https://raw.githubusercontent.com/HardikGoyal905/xxml/main/filecheck.xml
-          echo "Downloaded"
-          echo "Files in the directory are"
-          ls -l
-          
-          cat configureStyle.xml
           
           touch log.txt
           java -jar checkStyle.jar -c configureStyle.xml Github-Actions-Test | cat > log.txt
-          echo "Files currently"
-          ls -l
-          echo "Log file"
           errors
           cat log.txt
           
