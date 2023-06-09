@@ -11,7 +11,8 @@ jobs:
       - name: Set up JDK
         uses: actions/setup-java@v2
         with:
-          java-version: '14'
+          java-version: 14
+          distribution: 'adopt' # Specify the desired Java distribution here
           
       - name: Checkout code
         uses: actions/checkout@v2
