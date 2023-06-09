@@ -8,6 +8,11 @@ jobs:
   build:
     runs-on: macos-latest
     steps:
+      - name: Set up JDK
+        uses: actions/setup-java@v2
+        with:
+          java-version: '14'
+          
       - name: Checkout code
         uses: actions/checkout@v2
       
