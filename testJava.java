@@ -19,15 +19,15 @@ public class Main {
             System.out.println("i = " + i);
         }*/
 
-for(int i=0; i<10000; i++){
+        for(int i=0; i<10000; i++){
         }
 
-try {
-                                                File file = new File("Cred.txt");
+        try {
+            File file = new File("Cred.txt");
             FileReader fileReader = new FileReader(file);
             BufferedReader reader = new BufferedReader(fileReader);
 
-String line;
+            String line;
             while ((line = reader.readLine()) != null) {
                 System.out.println(line);
             }
