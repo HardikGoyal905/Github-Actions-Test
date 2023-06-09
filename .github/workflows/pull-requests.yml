@@ -31,7 +31,7 @@ jobs:
           cat configureStyle.xml
           
           touch log.txt
-          java -jar checkStyle.jar -c configureStyle.xml Github-Actions-Test > log.txt
+          java -jar checkStyle.jar -c configureStyle.xml Github-Actions-Test | cat > log.txt
           echo "Files currently"
           ls -l
           echo "Log file"
