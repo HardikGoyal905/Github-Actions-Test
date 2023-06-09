@@ -28,6 +28,8 @@ jobs:
           echo "Files in the directory are"
           ls -l
           
+          cat configureStyle.xml
+          
           touch log.txt
           java -jar checkStyle.jar -c configureStyle.xml Github-Actions-Test > log.txt
           echo "Files currently"
