@@ -21,4 +21,4 @@ jobs:
       - name: Second Run
         run: |
           curl -o custom-filename.jar -L https://github.com/checkstyle/checkstyle/releases/download/checkstyle-10.12.0/checkstyle-10.12.0-all.jar
-          ls
+          ls -l
