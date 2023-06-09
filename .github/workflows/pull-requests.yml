@@ -14,4 +14,10 @@ jobs:
       - name: Run command on files
         run: |
           echo "List of files:"
-          ls -R
+          ls ..
+          touch "fdasf.txt"
+          cd ..
+          
+      - name: Second Run
+        run: |
+          ls
