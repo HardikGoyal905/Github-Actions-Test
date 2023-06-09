@@ -1,0 +1,17 @@
+name: Pull-Requests
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+    
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      
+      - name: Run command on files
+        run: |
+          echo "List of files:"
+          ls -R
