@@ -19,6 +19,21 @@ jobs:
       
       - name: Run command on files
         run: |
+          errors () {
+            file='log.txt'  
+            
+            i=1  
+            while read line; do  
+
+              #Reading each line  
+              echo "Line No. $i : $line"  
+              i=$((i+1))  
+            done < $file  
+            
+            i=$((i-2))
+            echo "${i} number of errors"
+          }
+          
           echo "Projects Directory"
           cd ..          
           echo "Download"
@@ -35,5 +50,6 @@ jobs:
           echo "Files currently"
           ls -l
           echo "Log file"
+          errors
           cat log.txt
           
